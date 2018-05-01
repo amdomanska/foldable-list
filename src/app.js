@@ -47,6 +47,7 @@ class Tree extends React.Component {
     constructor() {
         super();
         this.state = {title: 'Your Table of Contents'};
+        this.toggled = true;
         this.onToggle = this.onToggle.bind(this);
     }
 
@@ -79,10 +80,9 @@ class Tree extends React.Component {
           <StyleRoot>
           <div style={styles.dataBox}>
             <div className="input-group">
-              <input className="form-control"
+              <textarea className="form-control"
                      onChange={this.onDataChange.bind(this)}
-                     placeholder="Type your data..."
-                     type="text"/>
+                     placeholder="Type your data..."></textarea>
                <span className="input-group-addon">
                   <i className="fa fa-question"
                     title="

@@ -18,7 +18,7 @@ export function parseTree(input) {
     return '';
   }
   console.log('input: ' + input);
-  let root = {title: null, isRoot: true, children: [] };
+  let root = {title: 'Your Table of Contents', children: [] };
   let lines = input.split('\n');
   console.log('lines: ' + input.split('\n'));
   let stack = [root, null];

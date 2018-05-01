@@ -9,7 +9,6 @@ import NodeHeader from './header';
 class TreeNode extends React.Component {
     constructor() {
         super();
-
         this.onClick = this.onClick.bind(this);
     }
 

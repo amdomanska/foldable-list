@@ -67,7 +67,7 @@ class TreeNode extends React.Component {
             return this.renderChildren(decorators, animations);
         }
 
-        const {animation, duration, ...restAnimationInfo} = animations.drawer;
+        const {...restAnimationInfo} = animations.drawer;
         return (
             <VelocityTransitionGroup {...restAnimationInfo}
                                      ref={ref => this.velocityRef = ref}>

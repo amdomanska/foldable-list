@@ -1,6 +1,6 @@
 'use strict';
 
-function getIndent(line){
+let getIndent = (line) => {
   let result = 0;
   for (let i = 0; i < line.length; i++) {
     if (line[i] === ' '){
@@ -11,25 +11,27 @@ function getIndent(line){
     }
   }
   return result / 2;
-}
+};
 
-export function parseTree(input) {
+export let parseTree = (input) => {
   if (input === '') {
     return '';
   }
-  console.log('input: ' + input);
-  let root = {title: 'Your Table of Contents', children: [] };
+  let root = {title: 'Your Table of Contents'};
   let lines = input.split('\n');
-  console.log('lines: ' + input.split('\n'));
   let stack = [root, null];
   lines.forEach((line) => {
     let currIndent = getIndent(line);
-    let curr = {title: line.substring(currIndent * 2), isRoot: false, children: []};
+    let curr = {title: line.substring(currIndent * 2)};
     while (stack.length - 1 > currIndent) {
       stack.pop();
     }
+    if (!stack[stack.length - 1].children) {
+      stack[stack.length - 1].children = [];
+    }
+    stack[stack.length - 1].toggled = true;
     stack[stack.length - 1].children.push(curr);
     stack.push(curr);
   });
   return root;
-}
+};

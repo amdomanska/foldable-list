@@ -5,7 +5,7 @@ export default {
         animation: {rotateZ: toggled ? 90 : 0},
         duration: 300
     }),
-    drawer: (/* props */) => ({
+    drawer: () => ({
         enter: {
             animation: 'slideDown',
             duration: 300

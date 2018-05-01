@@ -32,15 +32,21 @@ Toggle.propTypes = {
     style: PropTypes.object
 };
 
-const Header = ({node, style}) => {
+const Header = ({style, node}) => {
+    const iconType = node.children ? '' : 'file-text';
+    const iconClass = `fa fa-${iconType}`;
+    const iconStyle = {marginRight: '5px'};
+
     return (
         <div style={style.base}>
             <div style={style.title}>
-                {node.name}
+                <i className={iconClass} style={iconStyle}/>
+                {node.title}
             </div>
         </div>
     );
 };
+
 Header.propTypes = {
     style: PropTypes.object,
     node: PropTypes.object.isRequired

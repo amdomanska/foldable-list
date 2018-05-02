@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleRoot} from 'radium';
 import {Treebeard, decorators} from '../src/index';
+import HelpWindow from './components/helpWindow';
 
 import {parseTree} from './data';
 import styles from './styles';
@@ -42,40 +43,20 @@ class Tree extends React.Component {
   render() {
     return (
       <StyleRoot>
-      <div style={styles.dataBox}>
-        <div className="input-group">
-          <textarea id="textarea"
-                 className="form-control"
-                 onChange={this.onDataChange}
-                 placeholder="Type your data..."
-                 onKeyUp={this.auto_grow}></textarea>
-           <span className="input-group-addon">
-              <i className="fa fa-question"
-                title="
-                FORMAT: \
-                page 1\n\
-                  page 1.1\n\
-                  page 1.2\n\
-                    page 1.2.1\n\
-                page 2\n\
-                page 3\n\
-                  page 3.1\n\
-                  page 3.2\n\
-                page 4\n\
-                  page 4.1\n\
-                    page 4.1.1\n\
-                      page 4.1.1.1\n\
-                  page 4.2\n\
-                page 5\
-                "
-              />
-           </span>
+        <div style={styles.dataBox}>
+          <div className='input-group'>
+            <textarea id='textarea'
+                   className='form-control'
+                   onChange={this.onDataChange}
+                   placeholder='Type your data...'
+                   onKeyUp={this.auto_grow}></textarea>
+           <HelpWindow/>
           </div>
-        </div>
-        <div style={styles.component}>
-            <Treebeard data={this.state}
-                       decorators={decorators}
-                       onToggle={this.onToggle}/>
+          <div style={styles.component}>
+              <Treebeard data={this.state}
+                         decorators={decorators}
+                         onToggle={this.onToggle}/>
+          </div>
         </div>
       </StyleRoot>
     );

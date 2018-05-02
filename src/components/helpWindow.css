@@ -1,0 +1,54 @@
+.Modal {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  right: 300px;
+  bottom: 30px;
+  background-color: #21252B;
+  color: #9DA5AB
+}
+
+.well {
+  background-color: #21252B;
+  color: #9DA5AB
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b3b3b3;
+}
+
+.helpHeader {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.helpContent {
+  text-style: italic;
+  text-align: left;
+  font-size: 14px;
+}
+
+.helpContentRules {
+  font-weight: bold;
+  text-align: left;
+  font-size: 14px;
+}
+
+.helpFooter {
+  text-align: center;
+  font-size: 12px;
+}
+
+.button {
+  background-color: #b3b3b3;
+  color: #21252B;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%
+}

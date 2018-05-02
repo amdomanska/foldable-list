@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --content-base ./src/ --config ./webpack.config.js",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test-travis": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lib": "npm run babel",
     "babel": "rimraf lib && babel src/ -d lib/"

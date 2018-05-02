@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
 import styles from './helpWindow.css';
 
-
-ReactModal.setAppElement('#content');
-
 class HelpWindow extends React.Component {
   constructor () {
     super();

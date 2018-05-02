@@ -1,5 +1,3 @@
-'use strict';
-
 let getIndent = (line) => {
   let result = 0;
   for (let i = 0; i < line.length; i++) {

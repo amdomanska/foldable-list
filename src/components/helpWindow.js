@@ -45,7 +45,7 @@ class HelpWindow extends React.Component {
                 <p className='helpHeader'> INPUT EXAMPLE </p>
                 <p className='helpContentRules'>
                   next section: new line <br />
-                  nextSubchapter: indentation = 2 spaces
+                  nextSubsection: indentation = 2 spaces
                 </p>
                 <p className='helpContent'>
                 page 1 <br />

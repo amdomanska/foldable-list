@@ -10,7 +10,6 @@
     "eject": "react-scripts eject",
     "lib": "npm run babel",
     "babel": "rimraf lib && babel src/ -d lib/",
-    "heroku-postbuild": "npm --production=false && npm run build"
   },
   "peerDependencies": {
     "react": "^15.5.4 || ^16.0.0",

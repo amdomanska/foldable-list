@@ -10,7 +10,7 @@ import styles from './styles';
 class App extends React.Component {
   constructor() {
     super();
-    this.defaultState = {title: 'Your Table of Contents', toggled: false, children: null, number: ''};
+    this.defaultState = {title: 'YOUR TABLE OF CONTENTS', toggled: false, children: null, number: ''};
     this.state = this.defaultState;
     this.toggled = true;
     this.onToggle = this.onToggle.bind(this);
@@ -28,6 +28,7 @@ class App extends React.Component {
   }
 
   onDataChange = (e) => {
+    console.log(e.target);
     const newData = e.target.value.trim();
     let updated = this.defaultState;
     if (newData) {
@@ -39,8 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <HelpWindow/>
-      <checkbox id='displayNumber'></checkbox>
+      <HelpWindow ref={console.log('this works!')}/>
         <div style={styles.rowEqHeight}>
           <div style={styles.component}>
               <textarea id='textarea'

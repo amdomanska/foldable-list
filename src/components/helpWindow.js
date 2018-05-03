@@ -10,16 +10,39 @@ class HelpWindow extends React.Component {
     this.state = {
       showModal: false
     };
-
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-  handleOpenModal () {
+  handleOpenModal = () => {
     this.setState({ showModal: true });
   }
 
-  handleCloseModal () {
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  }
+
+  helpText = () => {
+    return 'Clean Code \n' +
+    '  There Will Be Code \n' +
+    '  Bad Code \n' +
+    '  The Total Cost of Owning a Mess \n' +
+    '    The Grand Redesign in the Sky \n' +
+    '    Attitude \n' +
+    '    The Primal Conundrum \n' +
+    '    The Art of Clean Code? \n' +
+    '  What Is Clean Code? \n' +
+    '  Schools of Thought \n' +
+    'Meaningful Names \n' +
+    '  Introduction \n' +
+    '  Avoid Encodings \n' +
+    '  Hungarian Notion \n' +
+    '  Member Prefixes \n' +
+    '  Avoid Mental Mapping \n' +
+    'Functions ';
+  }
+
+  checkExample = () => {
+    let textarea = document.getElementById('textarea');
+    textarea.value = this.helpText();
     this.setState({ showModal: false });
   }
 
@@ -45,27 +68,19 @@ class HelpWindow extends React.Component {
             <div>
               <div className='well'>
                 <p className='helpHeader'> INPUT EXAMPLE </p>
-                <p className='helpContentRules'>
-                  next section: new line <br />
-                  nextSubsection: indentation = 2 spaces
-                </p>
+                <ul className='helpContentRules'>
+                  <li> next section: new line </li>
+                  <li> nextSubsection: indentation = 2 spaces </li>
+                  <li> sections are enumerated automatically </li>
+                </ul>
                 <p className='helpContent'>
-                page 1 <br />
-                &nbsp;&nbsp;page 1.1 <br />
-                &nbsp;&nbsp;page 1.2 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;page 1.2.1 <br />
-                page 2 <br />
-                page 3 <br />
-                &nbsp;&nbsp;page 3.1 <br />
-                &nbsp;&nbsp;page 3.2 <br />
-                page 4 <br />
-                &nbsp;&nbsp;page 4.1 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;page 4.1.1 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page 4.1.1.1 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;page 4.2 <br />
-                page 5
+                <pre>
+                  {this.helpText().replace(/ /g, '\u00a0').replace(/(?:\r\n|\r|\n)/g, '\u000a')}
+                </pre>
                 </p><br />
-                <button className='closeButton'
+                <button className='modalButton'
+                        onClick={this.checkExample}>COPY THIS EXAMPLE AS AN INPUT</button>
+                <button className='modalButton'
                         onClick={this.handleCloseModal}>CLOSE</button>
                 <p className='helpFooter'> or press ESC to close </p>
               </div>

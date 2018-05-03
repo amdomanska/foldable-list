@@ -1,14 +1,15 @@
 .Modal {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  right: 30px;
-  bottom: 30x;
+  top: 5vh;
+  left: 25vh;
+  right: 25vh;
+  bottom: 5vh;
   background-color: #21252B;
   color: #9DA5AB
 }
 
 .well {
+  border: none;
   background-color: #21252B;
   color: #9DA5AB
 }
@@ -32,6 +33,7 @@
   text-style: italic;
   text-align: left;
   font-size: 14px;
+  background-color: #21252B;
 }
 
 .helpContentRules {
@@ -45,15 +47,18 @@
   font-size: 12px;
 }
 
-.closeButton {
+.modalButton {
+  font-weight: bold;
   background-color: #b3b3b3;
   color: #21252B;
   width: 40%;
   margin-left: 30%;
-  margin-right: 30%
+  margin-right: 30%;
+  margin-bottom: 5px;
 }
 
 .helpButton {
+  font-weight: bold;
   background-color: #b3b3b3;
   color: #21252B;
   float: right;

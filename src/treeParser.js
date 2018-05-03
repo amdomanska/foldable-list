@@ -14,8 +14,8 @@ let getIndent = (line) => {
 
 let getCurrentNumber = (stack) => {
   let prevSection = stack[stack.length - 1];
-  let prevSectionNumber = prevSection.number !== '' ? prevSection.number + '.' : '';
-  let currNumber = prevSectionNumber + (prevSection.children.length);
+  let prevSectionNumber = prevSection.number !== '' ? prevSection.number : '';
+  let currNumber = prevSectionNumber + (prevSection.children.length) + '.';
   return currNumber;
 };
 

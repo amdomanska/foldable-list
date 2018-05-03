@@ -51,10 +51,10 @@ class Container extends React.Component {
       <div onClick={onClick}
            ref={ref => this.clickableRef = ref}
            style={style.container}>
-          {!terminal ? this.renderToggle() : null}
+          {!terminal && node.number !== '' ? this.renderToggle() : null}
 
-          <decorators.Header node={node}
-                             style={style.header}/>
+            <decorators.Header node={node}
+                style={node.number === '' ? style.root : style.header}/>
       </div>
     );
   }

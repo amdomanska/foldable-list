@@ -25,15 +25,17 @@ class HelpWindow extends React.Component {
 
   render () {
     return (
-      <span className='input-group-addon'
-            onClick={this.handleOpenModal}>
-        <i className='fa fa-question'/>
+      <div>
+        <button className='helpButton'
+                onClick={this.handleOpenModal}>
+          <i className='fa fa-question'/>
+        </button>
         <ReactModal
           className='Modal'
           overlayClassName='Overlay'
           isOpen={this.state.showModal}
           contentLabel='Minimal Modal Example'
-          onClick={this.hadnleCloseModal}
+          onClick={this.handleCloseModal}
           shouldReturnFocusAfterClose={true}
           shouldFocusAfterRender={true}
           contentLabel='Example Modal'
@@ -63,13 +65,13 @@ class HelpWindow extends React.Component {
                 &nbsp;&nbsp;&nbsp;&nbsp;page 4.2 <br />
                 page 5
                 </p><br />
-                <button className='button'
+                <button className='closeButton'
                         onClick={this.handleCloseModal}>CLOSE</button>
                 <p className='helpFooter'> or press ESC to close </p>
               </div>
             </div>
         </ReactModal>
-      </span>
+      </div>
     );
   }
 }

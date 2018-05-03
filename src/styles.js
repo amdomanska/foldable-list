@@ -1,15 +1,19 @@
 export default {
   component: {
     width: '50%',
+    height: '100vh',
     display: 'inline-block',
     verticalAlign: 'top',
     padding: '20px',
-    '@media (max-width: 640px)': {
-      width: '100%',
-      display: 'block'
-    }
   },
-  dataBox: {
-    padding: '20px 20px 0 20px'
+  rowEqHeight: {
+    display: '-webkit-box',
+    display: '-webkit-flex',
+    display: '-ms-flexbox',
+    display: 'flex'
+  },
+  textarea: {
+    height: '95vh'
   }
+
 };

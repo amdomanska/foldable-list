@@ -4,7 +4,7 @@ import {StyleRoot} from 'radium';
 import {Treebeard, decorators} from '../src/index';
 import HelpWindow from './components/helpWindow';
 
-import {parseTree} from './data';
+import {parseTree} from './parseTree';
 import styles from './styles';
 
 class Tree extends React.Component {
@@ -35,30 +35,26 @@ class Tree extends React.Component {
     this.setState(updated);
   }
 
-  auto_grow = () => {
-    let element = document.getElementById('textarea');
-    element.style.height = (element.scrollHeight) + 'px';
-  }
-
   render() {
     return (
-      <StyleRoot>
-        <div style={styles.dataBox}>
-          <div className='input-group'>
-            <textarea id='textarea'
-                   className='form-control'
-                   onChange={this.onDataChange}
-                   placeholder='Type your data...'
-                   onKeyUp={this.auto_grow}></textarea>
-           <HelpWindow/>
-          </div>
+      <div>
+      <HelpWindow/>
+        <div style={styles.rowEqHeight}>
           <div style={styles.component}>
-              <Treebeard data={this.state}
-                         decorators={decorators}
-                         onToggle={this.onToggle}/>
+              <textarea id='textarea'
+                     style={styles.textarea}
+                     className='form-control'
+                     onChange={this.onDataChange}
+                     placeholder='Type your data...'></textarea>
+          </div>
+
+          <div style={styles.component}>
+            <Treebeard data={this.state}
+                       decorators={decorators}
+                       onToggle={this.onToggle}/>
           </div>
         </div>
-      </StyleRoot>
+      </div>
     );
   }
 }

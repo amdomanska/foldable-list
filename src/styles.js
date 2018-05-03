@@ -13,7 +13,8 @@ export default {
     display: 'flex'
   },
   textarea: {
-    height: '95vh'
+    height: '95vh',
+    resize: 'none'
   }
 
 };

@@ -31,17 +31,11 @@ Toggle.propTypes = {
 };
 
 const Header = ({style, node}) => {
-  const iconType = node.children ? '' : 'file-text';
-  const iconClass = `fa fa-${iconType}`;
-  const iconStyle = {marginRight: '5px'};
-  const headerText = node.number + ' ' + node.title;
-
   return (
       <div style={style.base}>
-          <div style={style.title}>
-              <i className={iconClass} style={iconStyle}/>
-              {headerText}
-          </div>
+        <div style={style.title}>
+          <strong> {node.number} </strong> &nbsp;&nbsp;&nbsp;&nbsp;{node.title}
+        </div>
       </div>
   );
 };

@@ -4,13 +4,13 @@ import {StyleRoot} from 'radium';
 import {Treebeard, decorators} from '../src/index';
 import HelpWindow from './components/helpWindow';
 
-import {parseTree} from './parseTree';
+import {parseTree} from './treeParser';
 import styles from './styles';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.defaultState = {title: 'Your Table of Contents', toggled: false, children: null};
+    this.defaultState = {title: 'Your Table of Contents', toggled: false, children: null, number: ''};
     this.state = this.defaultState;
     this.toggled = true;
     this.onToggle = this.onToggle.bind(this);

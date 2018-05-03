@@ -28,7 +28,6 @@ class TreeNode extends React.Component {
 
     const anim = Object.assign({}, animations, node.animations);
     return {
-      toggle: anim.toggle(this.props),
       drawer: anim.drawer(this.props)
     };
   }

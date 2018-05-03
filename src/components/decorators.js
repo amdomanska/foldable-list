@@ -18,10 +18,7 @@ const Toggle = ({style}) => {
   return (
       <div style={style.base}>
           <div style={style.wrapper}>
-              <svg height={height} width={width}>
-                  <polygon points={points}
-                           style={style.arrow}/>
-              </svg>
+            <i className='fa fa-list-ul'/>
           </div>
       </div>
   );
@@ -70,9 +67,7 @@ class Container extends React.Component {
     }
 
     return (
-      <VelocityComponent animation={animations.toggle.animation}
-                         duration={animations.toggle.duration}
-                         ref={ref => this.velocityRef = ref}>
+      <VelocityComponent ref={ref => this.velocityRef = ref}>
           {this.renderToggleDecorator()}
       </VelocityComponent>
     );

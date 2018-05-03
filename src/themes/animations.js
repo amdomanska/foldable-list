@@ -1,10 +1,6 @@
 'use strict';
 
 export default {
-  toggle: ({node: {toggled}}) => ({
-    animation: {rotateZ: toggled ? 90 : 0},
-    duration: 300
-  }),
   drawer: () => ({
     enter: {
       animation: 'slideDown',

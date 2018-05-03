@@ -3,7 +3,7 @@ export default {
     base: {
       listStyle: 'none',
       backgroundColor: '#21252B',
-      margin: 0,
+      margin: 10,
       padding: 0,
       color: '#9DA5AB',
       fontFamily: 'lucida grande ,tahoma,verdana,arial,sans-serif',
@@ -30,17 +30,11 @@ export default {
         },
         wrapper: {
           position: 'absolute',
-          top: '50%',
+          top: '38%',
           left: '50%',
-          margin: '-7px 0 0 -7px',
+          margin: '-7px 0px 100px -13px',
           height: '14px'
         },
-        height: 14,
-        width: 14,
-        arrow: {
-          fill: '#9DA5AB',
-          strokeWidth: 0
-        }
       },
       header: {
         base: {

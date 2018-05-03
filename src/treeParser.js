@@ -38,7 +38,6 @@ export let parseTree = (input) => {
     stack[stack.length - 1].toggled = true;
     stack[stack.length - 1].children.push(curr);
     curr.number = getCurrentNumber(stack);
-    curr.title = curr.number + ' ' + curr.title;
     stack.push(curr);
   });
   return root;

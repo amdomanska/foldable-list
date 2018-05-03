@@ -40,6 +40,7 @@ class App extends React.Component {
     return (
       <div>
       <HelpWindow/>
+      <checkbox id='displayNumber'></checkbox>
         <div style={styles.rowEqHeight}>
           <div style={styles.component}>
               <textarea id='textarea'

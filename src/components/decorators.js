@@ -34,12 +34,13 @@ const Header = ({style, node}) => {
   const iconType = node.children ? '' : 'file-text';
   const iconClass = `fa fa-${iconType}`;
   const iconStyle = {marginRight: '5px'};
+  const headerText = node.number + ' ' + node.title;
 
   return (
       <div style={style.base}>
           <div style={style.title}>
               <i className={iconClass} style={iconStyle}/>
-              {node.title}
+              {headerText}
           </div>
       </div>
   );

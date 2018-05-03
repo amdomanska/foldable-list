@@ -11,10 +11,6 @@ Loading.propTypes = {
 };
 
 const Toggle = ({style}) => {
-  const {height, width} = style;
-  const midHeight = height * 0.5;
-  const points = `0,0 0,${height} ${width},${midHeight}`;
-
   return (
       <div style={style.base}>
           <div style={style.wrapper}>

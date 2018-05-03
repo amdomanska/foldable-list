@@ -7,13 +7,14 @@ import HelpWindow from './components/helpWindow';
 import {parseTree} from './parseTree';
 import styles from './styles';
 
-class Tree extends React.Component {
+class App extends React.Component {
   constructor() {
     super();
     this.defaultState = {title: 'Your Table of Contents', toggled: false, children: null};
     this.state = this.defaultState;
     this.toggled = true;
     this.onToggle = this.onToggle.bind(this);
+    document.title = 'Table of Contents Generator';
   }
 
   onToggle = (node, toggled) => {
@@ -60,4 +61,4 @@ class Tree extends React.Component {
 }
 
 const content = document.getElementById('content');
-ReactDOM.render(<Tree />, content);
+ReactDOM.render(<App />, content);

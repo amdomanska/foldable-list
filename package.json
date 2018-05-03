@@ -9,7 +9,7 @@
     "test-travis": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lib": "npm run babel",
-    "babel": "rimraf lib && babel src/ -d lib/",
+    "babel": "rimraf lib && babel src/ -d lib/"
   },
   "peerDependencies": {
     "react": "^15.5.4 || ^16.0.0",

@@ -23,7 +23,7 @@ export let parseTree = (input) => {
   if (input === '') {
     return '';
   }
-  let root = {title: 'YOUR TABLE OF CONTENTS', number: ''};
+  let root = {title: '', number: ''};
   let lines = input.split('\n');
   let stack = [root, null];
   lines.forEach((line) => {

@@ -42,28 +42,32 @@ Header.propTypes = {
 class Container extends React.Component {
   render() {
     const {style, decorators, terminal, onClick, node} = this.props;
-
-    return (
-      <div onClick={onClick}
-           ref={ref => this.clickableRef = ref}
-           style={style.container}>
-          {!terminal && node.number !== '' ? this.renderToggle() : null}
-
-            <decorators.Header node={node}
-                style={node.number === '' ? style.root : style.header}/>
-      </div>
-    );
+    if (node.number !== ''){
+      return (
+        <div onClick={onClick}
+             ref={ref => this.clickableRef = ref}
+             style={style.container}>
+          {!terminal ? this.renderToggle() : null}
+          <decorators.Header node={node}
+                             style={style.header}/>
+        </div>
+      );
+    }
+    else {
+      return null;
+    }
   }
 
   renderToggle() {
-    const {animations} = this.props;
+    //const {animations} = this.props;
+    const {animations, style, decorators, terminal, onClick, node} = this.props;
 
     if (!animations) {
       return this.renderToggleDecorator();
     }
 
     return (
-      <VelocityComponent ref={ref => this.velocityRef = ref}>
+      <VelocityComponent ref={ref => this.velocityRef = ref} >
           {this.renderToggleDecorator()}
       </VelocityComponent>
     );

@@ -34,7 +34,7 @@ export default {
           position: 'absolute',
           top: '38%',
           left: '50%',
-          margin: '-7px 0px 100px -13px',
+          margin: '-8px 0px 0px -13px',
           height: '14px'
         },
       },
@@ -42,12 +42,7 @@ export default {
         base: {
           display: 'inline-block',
           verticalAlign: 'top',
-          color: '#9DA5AB',
-          'white-space': 'pre-wrap',      /* CSS3 */
-          'white-space': '-moz-pre-wrap', /* Firefox */
-          'white-space': '-pre-wrap',     /* Opera <7 */
-          'white-space': '-o-pre-wrap',   /* Opera 7 */
-          'word-wrap': 'break-word'      /* IE */
+          color: '#9DA5AB'
         },
         connector: {
           width: '2px',
@@ -59,20 +54,8 @@ export default {
           left: '-21px'
         },
         title: {
-          lineHeight: '24px',
-          verticalAlign: 'middle',
-          width: '40vw'
-        }
-      },
-      root: {
-        title: {
-          lineHeight: '30px',
-          verticalAlign: 'left',
-          marginLeft: '-10px',
-          fontSize: '20px',
-          fontColor: '#9DA5AB',
-          fontWeight: 'bold',
-          marginBottom: '20px'
+          lineHeight: '26px',
+          verticalAlign: 'middle'
         }
       },
       subtree: {
@@ -83,5 +66,5 @@ export default {
         color: '#E2C089'
       }
     }
-  }
+  },
 };

@@ -15,6 +15,17 @@ export default {
   textarea: {
     height: '95vh',
     resize: 'none'
+  },
+  title: {
+    lineHeight: '30px',
+    verticalAlign: 'left',
+    marginLeft: '10px',
+    paddingLeft: '20px',
+    fontSize: '20px',
+    fontColor: '#9DA5AB',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+    color: '#9DA5AB'
   }
 
 };

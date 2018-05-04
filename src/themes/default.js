@@ -42,7 +42,12 @@ export default {
         base: {
           display: 'inline-block',
           verticalAlign: 'top',
-          color: '#9DA5AB'
+          color: '#9DA5AB',
+          'white-space': 'pre-wrap',      /* CSS3 */
+          'white-space': '-moz-pre-wrap', /* Firefox */
+          'white-space': '-pre-wrap',     /* Opera <7 */
+          'white-space': '-o-pre-wrap',   /* Opera 7 */
+          'word-wrap': 'break-word'      /* IE */
         },
         connector: {
           width: '2px',
@@ -56,6 +61,7 @@ export default {
         title: {
           lineHeight: '24px',
           verticalAlign: 'middle',
+          width: '40vw'
         }
       },
       root: {
